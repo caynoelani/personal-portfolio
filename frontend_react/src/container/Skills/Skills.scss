@@ -1,0 +1,87 @@
+.app__skills {
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__skills-container {
+    max-width: 80%;
+    margin-top: 3rem;
+
+    @media screen and (max-width: 900px){
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.app__skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media screen and (max-width: 900px){
+        // margin-right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.app__skills-item {
+    flex-direction: column;
+    text-align: center;
+    margin: 1rem;
+    transition: all 0.3s ease-in-out;
+
+    div {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: #edf2f8;
+
+        background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+        background-image: linear-gradient(top, #f4f1ee, #fff);
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+        -webkit-transition: all .1s linear;
+        transition: all .3s linear;
+
+        // background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+        // background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+        // background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+        // background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+        // background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+        // box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        &:hover {
+            background-color:#fff;
+        }
+
+        @media screen and (min-width: 900px){
+            width: 150px;
+            height: 150px;
+        }
+
+        @media screen and (min-width: 2000px){
+            width: 70px;
+            height: 70px;
+        }
+    };
+
+}
+
+p {
+    font-weight: 500;
+    margin-top: 0.5rem;
+
+    @media screen and (min-width: 2000px){
+        margin: 1rem 2rem;
+
+        p {
+            margin-top: 1rem;
+        }
+    }
+}

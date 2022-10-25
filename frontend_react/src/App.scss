@@ -1,0 +1,211 @@
+.app {
+    background-color: var(--primary-color);
+    font-family: var(--font-base);
+  }
+
+  
+  span {
+    color: var(--secondary-color);
+    background: linear-gradient(90deg, rgba(0, 150, 226, 1), 70%, rgba(0, 150, 226, .4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .app__whitebg {
+    background-color: var(--white-color);
+  }
+  
+  .app__primarybg {
+    background-color: var(--primary-color);
+  }
+  
+  .app__container {
+    width: 100%;
+    min-height: 100vh;
+  
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .app__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app__wrapper {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    padding: 4rem 2rem;
+  
+    @media screen and (max-width: 450px) {
+      padding: 4rem 1rem 2rem;
+    }
+  }
+  
+  .copyright {
+    width: 100%;
+    padding: 2rem 0 0;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  
+    p {
+      text-transform: uppercase;
+      color: var(--black-color);
+    }
+  }
+  
+  .head-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--black-color);
+    text-transform: capitalize;
+
+    &--center {
+      text-align: center;
+    }
+  
+    &--left {
+      text-align: left;
+    }
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 4rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .p-text {
+    font-size: 0.8rem;
+    text-align: left;
+    color: var(--gray-color);
+    line-height: 1.5;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.75rem;
+    }
+  }
+  
+  .bold-text {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--black-color);
+    text-align: left;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 2rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .app__social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  
+    padding: 1rem;
+  
+    div {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--white-color);
+      margin: 0.25rem 0;
+      border: 1px solid var(--lightGray-color);
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+			background-image: linear-gradient(top, #f4f1ee, #fff);
+			box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+			-webkit-transition: all .1s linear;
+			transition: all .3s linear;
+
+      // background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+      // background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+      // background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+      // background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+      // background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+      // box-shadow: 0px 3px 3px #aaa, inset 0px 2px 3px #f6f6f6;
+  
+      svg {
+        width: 15px;
+        height: 15px;
+        color: var(--secondary-color);
+      }
+  
+      &:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px var(--secondary-color), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  
+        svg {
+          color: var(--white-color);
+        }
+      }
+  
+      @media screen and (min-width: 2000px) {
+        width: 70px;
+        height: 70px;
+  
+        margin: 0.5rem 0;
+  
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+  
+  .app__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+    padding: 1rem;
+  
+    .app__navigation-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #cbcbcb;
+      margin: 0.5rem;
+  
+      transition: background-color 0.2s ease-in-out;
+  
+      &:hover {
+        background-color: var(--secondary-color);
+      }
+  
+      @media screen and (min-width: 2000px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .app__navigation,
+    .app__social {
+      display: none;
+    }
+  
+    .copyright {
+      padding: 2rem;
+    }
+  }
